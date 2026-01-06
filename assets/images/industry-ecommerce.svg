@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <defs>
+    <linearGradient id="ge" x1="0" x2="1"><stop offset="0" stop-color="#F5A623"/><stop offset="1" stop-color="#D8871A"/></linearGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="12" fill="url(#ge)"/>
+  <g transform="translate(28,28)" fill="#fff">
+    <rect x="0" y="0" width="120" height="60" rx="10" fill="rgba(255,255,255,0.12)"/>
+    <text x="28" y="44" font-family="Roboto, Arial" font-size="18">Shop</text>
+    <text x="160" y="48" font-family="Roboto, Arial" font-size="22">E-commerce</text>
+  </g>
+</svg>
