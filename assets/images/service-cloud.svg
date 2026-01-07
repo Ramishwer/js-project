@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+  <defs>
+    <linearGradient id="g-cloud" x1="0" x2="1"><stop offset="0" stop-color="#f0fdf4"/><stop offset="1" stop-color="#dcfce7"/></linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g-cloud)"/>
+  <g transform="translate(40,40)">
+    <rect width="720" height="200" rx="12" fill="#fff" stroke="#dcfce7"/>
+    <rect x="24" y="24" width="300" height="20" rx="8" fill="#16a34a"/>
+    <rect x="24" y="56" width="200" height="12" rx="6" fill="#4ade80" opacity="0.9"/>
+    <rect x="24" y="80" width="160" height="12" rx="6" fill="#bbf7d0"/>
+  </g>
+</svg>

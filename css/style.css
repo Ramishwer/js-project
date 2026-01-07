@@ -1,26 +1,67 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --bg: #ffffff;
+    --muted: #666876;
+    --text: #111827;
+    --brand: #2563eb;
+    --brand-2: #4A90E2;
+    --accent: #7c3aed;
+    --surface: #f8fafc;
+    --radius: 12px;
+    --container: 1200px;
 }
 
+/* Reset and Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body{height:100%;}
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: Roboto, Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
     overflow-x: hidden;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: var(--container);
     margin: 0 auto;
     padding: 0 20px;
 }
 
-p {
-    color: #4A90E2;
+p { color: var(--muted); }
+
+img{max-width:100%;display:block;height:auto}
+
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Explicit responsive image helper (use on all <img>) */
+.img-responsive{display:block;max-width:100%;height:auto;border-radius:8px}
+
+/* Paragraph justification for readable, professional layout */
+p,
+.intro-text p,
+.service-card p,
+.about p,
+.portfolio-item p,
+.contact p,
+.footer-section p,
+.stat p,
+.intro-caption {
+    text-align: justify;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-break: break-word;
+    /* keep last line left aligned for better readability */
+    text-align-last: left;
 }
+
+/* Prevent tiny text blocks from awkward justification */
+.stat p,
+.footer-section p { text-align: left; }
 
 /* Navigation */
 header {
@@ -52,6 +93,9 @@ nav {
     display: flex;
     list-style: none;
 }
+    transition: color 0.3s;
+}
+
 
 .nav-links li {
     margin-left: 2rem;
@@ -178,9 +222,10 @@ nav {
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--brand), var(--accent));
     color: white;
     padding: 0 20px;
+    padding-top: 86px;
 }
 
 .hero-content {
@@ -189,10 +234,10 @@ nav {
 }
 
 .hero h2 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+    line-height: 1.08;
 }
 
 .hero p {
@@ -202,23 +247,24 @@ nav {
 }
 
 .cta-button {
-    display: inline-block;
-    background: #4A90E2;
-    color: white;
-    padding: 1rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(90deg,var(--brand),var(--brand-2));
+    color: #fff;
+    padding: 0.75rem 1.25rem;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: 500;
-    transition: all 0.3s;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 180ms ease, box-shadow 180ms ease;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .cta-button:hover {
-    background: #357ABD;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 12px 40px rgba(37,99,235,0.18);
 }
 
 .hero-image {
@@ -231,6 +277,14 @@ nav {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Card utilities */
+.card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    box-shadow: 0 8px 24px rgba(15,23,42,0.06);
 }
 
 /* Intro Section */
@@ -587,6 +641,36 @@ nav {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Reveal lines with staggered animation */
+.reveal p {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: slideUp 560ms cubic-bezier(.2,.9,.2,1) forwards;
+}
+.reveal p:nth-child(1){ animation-delay: 0s; }
+.reveal p:nth-child(2){ animation-delay: 0.06s; }
+.reveal p:nth-child(3){ animation-delay: 0.12s; }
+.reveal p:nth-child(4){ animation-delay: 0.18s; }
+.reveal p:nth-child(5){ animation-delay: 0.24s; }
+.reveal p:nth-child(6){ animation-delay: 0.30s; }
+.reveal p:nth-child(7){ animation-delay: 0.36s; }
+.reveal p:nth-child(8){ animation-delay: 0.42s; }
+
+@keyframes slideUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating subtle image motion */
+.float { animation: float 7s ease-in-out infinite; }
+
+/* Pulse for CTAs */
+.pulse { transition: transform .18s ease, box-shadow .18s ease; }
+.pulse:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 14px 44px rgba(37,99,235,0.12); }
+
+/* Tilt micro-interaction */
+.tilt { transition: transform .18s ease; transform-origin: center; }
+.tilt:hover { transform: rotate3d(0,1,0,6deg) translateY(-6px); }
 
 /* Responsive Design */
 @media (max-width: 768px) {

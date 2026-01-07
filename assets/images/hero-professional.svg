@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <g transform="translate(80,90)">
+    <rect x="0" y="0" width="520" height="420" rx="20" fill="rgba(255,255,255,0.06)"/>
+    <rect x="560" y="40" width="700" height="560" rx="24" fill="rgba(255,255,255,0.06)"/>
+  </g>
+  <g fill="#fff" font-family="Inter, Roboto, sans-serif">
+    <text x="96" y="80" font-size="44" font-weight="700">TechNova Solutions</text>
+    <text x="96" y="124" font-size="20" opacity="0.95">Design · Build · Scale</text>
+  </g>
+</svg>

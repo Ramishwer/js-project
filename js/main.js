@@ -12,14 +12,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Mobile menu toggle
+// Mobile menu toggle (guard elements exist)
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
-});
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+}
 // Dropdown behavior: mobile toggle, keyboard nav, outside-click close
 document.querySelectorAll('.dropdown-toggle').forEach(btn => {
     const li = btn.parentElement;
@@ -97,27 +99,22 @@ window.addEventListener('resize', () => {
     });
 });
 
-// Contact form submission
+// Contact form submission (only if present)
 const contactForm = document.getElementById('contact-form');
-
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    // Simple validation
-    if (name && email && message) {
-        // In a real application, you would send this data to a server
-        alert(`Thank you, ${name}! Your message has been sent. We'll get back to you soon.`);
-        
-        // Clear the form
-        contactForm.reset();
-    } else {
-        alert('Please fill in all fields.');
-    }
-});
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name')?.value;
+        const email = document.getElementById('email')?.value;
+        const message = document.getElementById('message')?.value;
+        if (name && email && message) {
+            alert(`Thank you, ${name}! Your message has been sent. We'll get back to you soon.`);
+            contactForm.reset();
+        } else {
+            alert('Please fill in all fields.');
+        }
+    });
+}
 
 // Add scroll effect to header
 window.addEventListener('scroll', () => {
@@ -144,7 +141,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements to animate
-document.querySelectorAll('.service-card, .portfolio-item, .stat, .fade-in').forEach(el => {
+document.querySelectorAll('.reveal p, .hero h2, .hero p, .cta-button, .service-card, .portfolio-item, .stat, .fade-in').forEach(el => {
     observer.observe(el);
 });
 
