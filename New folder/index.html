@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Hi, I'm <span>Ram Ishwer Kumar</span></h1>
+            <p>Java Backend Developer</p>
+            <a href="#experience" class="btn">View My Experience</a>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a dedicated Java Backend Developer with 3 years of experience in designing and developing scalable backend systems. I specialize in Microservices architecture and have a strong command over Java technologies and cloud platforms.</p>
+                    <div class="skills">
+                        <span class="skill-tag">Core Java</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">JPA / Hibernate</span>
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="experience-container">
+                <div class="experience-card">
+                    <h3>Bedge Tech Service</h3>
+                    <p class="role">Java Backend Developer</p>
+                    <p class="date">Oct 2025 - Present</p>
+                </div>
+                <div class="experience-card">
+                    <h3>56 N software Pvt Ltd</h3>
+                    <p class="role">Java Backend Developer</p>
+                    <p class="date">Feb 2025 - June 2025</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Minterminds</h3>
+                    <p class="role">Java Backend Developer</p>
+                    <p class="date">March 2024 - Jan 2025</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Virtuoso Netsoft Pvt Ltd</h3>
+                    <p class="role">Java Backend Developer</p>
+                    <p class="date">Sept 2022 - Feb 2024</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Key Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>IDBI GST</h3>
+                        <p><strong>Domain: Banking</strong></p>
+                        <p>Developed for Bedge Tech Service. A comprehensive GST solution tailored for the banking sector.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Wohoo GiftBrandtz</h3>
+                        <p><strong>Domain: Giftcards</strong></p>
+                        <p>Developed for 56 N Software Pvt Ltd. A digital gifting platform managing gift card lifecycles.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Goev</h3>
+                        <p><strong>Domain: Logistics</strong></p>
+                        <p>Developed for Minterminds. A logistics management system optimizing fleet operations.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>RCS / RBM</h3>
+                        <p><strong>Domain: Revenue & Billing</strong></p>
+                        <p>Developed for Virtuoso Netsoft. A robust system for revenue assurance and billing management.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-container">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <p style="font-size: 1.2rem; color: var(--text-color); margin-bottom: 0.5rem;">
+                        Email: <a href="mailto:ramk17091999@gmail.com" style="color: var(--primary-color); font-weight: bold;">ramk17091999@gmail.com</a>
+                    </p>
+                    <p style="font-size: 1.2rem; color: var(--text-color);">
+                        Mobile: <a href="tel:+918252240857" style="color: var(--primary-color); font-weight: bold;">+91 8252240857</a>
+                    </p>
+                </div>
+                <form>
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
